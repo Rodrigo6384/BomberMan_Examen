@@ -1,0 +1,17 @@
+/NOLOGO
+/errorReport:prompt
+/MACHINE:x64
+/SUBSYSTEM:WINDOWS
+/DEF
+/NAME:"UE4Editor-BomerMan_Examen.dll"
+/IGNORE:4221
+/NODEFAULTLIB
+"C:\Users\DAVID\Desktop\SIS_457\BomerMan_Examen\Intermediate\Build\Win64\BomerMan_ExamenEditor\Development\Engine\SharedPCH.Engine.ShadowErrors.h.obj"
+"C:\Users\DAVID\Desktop\SIS_457\BomerMan_Examen\Intermediate\Build\Win64\UE4Editor\Development\BomerMan_Examen\BomerMan_Examen.cpp.obj"
+"C:\Users\DAVID\Desktop\SIS_457\BomerMan_Examen\Intermediate\Build\Win64\UE4Editor\Development\BomerMan_Examen\BomerMan_ExamenCharacter.cpp.obj"
+"C:\Users\DAVID\Desktop\SIS_457\BomerMan_Examen\Intermediate\Build\Win64\UE4Editor\Development\BomerMan_Examen\BomerMan_ExamenGameMode.cpp.obj"
+"C:\Users\DAVID\Desktop\SIS_457\BomerMan_Examen\Intermediate\Build\Win64\UE4Editor\Development\BomerMan_Examen\BomerMan_Examen.init.gen.cpp.obj"
+"C:\Users\DAVID\Desktop\SIS_457\BomerMan_Examen\Intermediate\Build\Win64\UE4Editor\Development\BomerMan_Examen\BomerMan_ExamenCharacter.gen.cpp.obj"
+"C:\Users\DAVID\Desktop\SIS_457\BomerMan_Examen\Intermediate\Build\Win64\UE4Editor\Development\BomerMan_Examen\BomerMan_ExamenGameMode.gen.cpp.obj"
+"C:\Users\DAVID\Desktop\SIS_457\BomerMan_Examen\Intermediate\Build\Win64\UE4Editor\Development\BomerMan_Examen\Default.rc2.res"
+/OUT:"C:\Users\DAVID\Desktop\SIS_457\BomerMan_Examen\Intermediate\Build\Win64\UE4Editor\Development\BomerMan_Examen\UE4Editor-BomerMan_Examen.lib"

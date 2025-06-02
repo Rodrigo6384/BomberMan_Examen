@@ -1,0 +1,14 @@
+{
+	"Targets": [
+		{
+			"Name": "BomerMan_Examen",
+			"Path": "C:\\Users\\DAVID\\Desktop\\SIS_457\\BomerMan_Examen\\Source\\BomerMan_Examen.Target.cs",
+			"Type": "Game"
+		},
+		{
+			"Name": "BomerMan_ExamenEditor",
+			"Path": "C:\\Users\\DAVID\\Desktop\\SIS_457\\BomerMan_Examen\\Source\\BomerMan_ExamenEditor.Target.cs",
+			"Type": "Editor"
+		}
+	]
+}
