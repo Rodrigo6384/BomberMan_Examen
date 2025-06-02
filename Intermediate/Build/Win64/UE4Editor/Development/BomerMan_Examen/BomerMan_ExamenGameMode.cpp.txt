@@ -13,3 +13,11 @@ C:\Program Files\Epic Games\UE_4.27\Engine\Source\Runtime\Engine\Classes\GameFra
 C:\Program Files\Epic Games\UE_4.27\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\RootMotionSource.generated.h
 C:\Program Files\Epic Games\UE_4.27\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\Character.generated.h
 C:\Users\DAVID\Desktop\SIS_457\BomerMan_Examen\Intermediate\Build\Win64\UE4Editor\Inc\BomerMan_Examen\BomerMan_ExamenCharacter.generated.h
+C:\Users\DAVID\Desktop\SIS_457\BomerMan_Examen\Source\BomerMan_Examen\EjercitoBuilder.h
+C:\Users\DAVID\Desktop\SIS_457\BomerMan_Examen\Source\BomerMan_Examen\Comandante.h
+C:\Users\DAVID\Desktop\SIS_457\BomerMan_Examen\Source\BomerMan_Examen\InterComandante.h
+C:\Users\DAVID\Desktop\SIS_457\BomerMan_Examen\Intermediate\Build\Win64\UE4Editor\Inc\BomerMan_Examen\InterComandante.generated.h
+C:\Users\DAVID\Desktop\SIS_457\BomerMan_Examen\Intermediate\Build\Win64\UE4Editor\Inc\BomerMan_Examen\Comandante.generated.h
+C:\Users\DAVID\Desktop\SIS_457\BomerMan_Examen\Source\BomerMan_Examen\InterEnemigo.h
+C:\Users\DAVID\Desktop\SIS_457\BomerMan_Examen\Intermediate\Build\Win64\UE4Editor\Inc\BomerMan_Examen\InterEnemigo.generated.h
+C:\Users\DAVID\Desktop\SIS_457\BomerMan_Examen\Intermediate\Build\Win64\UE4Editor\Inc\BomerMan_Examen\EjercitoBuilder.generated.h

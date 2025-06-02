@@ -13,6 +13,9 @@ class ABomerMan_ExamenGameMode : public AGameModeBase
 
 public:
 	ABomerMan_ExamenGameMode();
+
+	
+	virtual void BeginPlay() override;
 };
 
 
