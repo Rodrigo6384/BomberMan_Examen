@@ -32,15 +32,12 @@ private:
 	FVector EnemigoCentauroLocation; // Ubicación del enemigo a distancia
 public:
 	void CrearComandante();//spawn comandante 
-	void AgregarEnemigoOrco();//spawn ejesito
-	void AgregarEnemigoCentauro();
+	void AgregarEnemigoOrco(int Cantidad);//spawn ejesito
+	void AgregarEnemigoCentauro(int Cantidad);
 	void ConstruirEjercito();//construye el ejercito
 
-	void SetComandanteLocation(FVector NewLocation) { ComandanteLocation = NewLocation; }
-	void SetEnemigoOrcoLocation(FVector NewLocation) { EnemigoOrcoLocation = NewLocation; }
-	void SetEnemigoCentauroLocation(FVector NewLocation) { EnemigoCentauroLocation = NewLocation; }
-
-	AComandante* ObtenerComandante() { return Comandante; }
-	TArray<IInterEnemigo*> ObtenerEnemigos() { return Enemigos; }
+	void SetComandanteLocation(FVector NewLocation);
+	void SetEnemigoOrcoLocation(FVector NewLocation);
+	void SetEnemigoCentauroLocation(FVector NewLocation);
 
 };

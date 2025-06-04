@@ -16,6 +16,6 @@ class BOMERMAN_EXAMEN_API AEnemigoCentauro : public AEnemigoBase
 public:
 	AEnemigoCentauro();
 public:
-	virtual void Atacar() override;
-	virtual void Defender() override;
+	void Atacar() override;
+	void Defender() override;
 };

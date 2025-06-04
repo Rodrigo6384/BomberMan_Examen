@@ -5,11 +5,12 @@
 
 AEnemigoOrco::AEnemigoOrco()
 {
-	static ConstructorHelpers::FObjectFinder<UMaterial> ObjetoMaterial(TEXT("Material'/Game/StarterContent/Materials/M_Metal_Rust.M_Metal_Rust'"));
-	if (ObjetoMaterial.Succeeded())
-	{
-		MallaEnemigoBase->SetMaterial(0, ObjetoMaterial.Object);
-	}
+    // Cargar el material
+    static ConstructorHelpers::FObjectFinder<UMaterial> ObjetoMaterial(TEXT("Material'/Game/StarterContent/Materials/M_Metal_Rust.M_Metal_Rust'"));
+    if (ObjetoMaterial.Succeeded())
+    {
+        MallaEnemigoBase->SetMaterial(0, ObjetoMaterial.Object);
+    }
 }
 
 void AEnemigoOrco::Atacar()

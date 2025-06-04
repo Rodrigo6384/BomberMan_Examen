@@ -5,11 +5,12 @@
 
 AEnemigoCentauro::AEnemigoCentauro()
 {
-	static ConstructorHelpers::FObjectFinder<UMaterial> ObjetoMaterial(TEXT("Material'/Game/StarterContent/Materials/M_Metal_Burnished_Steel.M_Metal_Burnished_Steel'"));
-	if (ObjetoMaterial.Succeeded())
-	{
-		MallaEnemigoBase->SetMaterial(0, ObjetoMaterial.Object);
-	}
+
+    static ConstructorHelpers::FObjectFinder<UMaterial> ObjetoMaterial(TEXT("Material'/Game/StarterContent/Materials/M_Metal_Burnished_Steel.M_Metal_Burnished_Steel'"));
+    if (ObjetoMaterial.Succeeded())
+    {
+        MallaEnemigoBase->SetMaterial(0, ObjetoMaterial.Object);
+    }
 }
 
 void AEnemigoCentauro::Atacar()

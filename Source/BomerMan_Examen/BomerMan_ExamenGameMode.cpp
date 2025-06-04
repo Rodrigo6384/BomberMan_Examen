@@ -3,6 +3,8 @@
 #include "BomerMan_ExamenGameMode.h"
 #include "BomerMan_ExamenCharacter.h"
 #include "EjercitoBuilder.h"
+#include "EjercitoDirector.h"
+#include "EnemigoOrco.h"
 #include "UObject/ConstructorHelpers.h"
 
 ABomerMan_ExamenGameMode::ABomerMan_ExamenGameMode()
@@ -18,14 +20,21 @@ ABomerMan_ExamenGameMode::ABomerMan_ExamenGameMode()
 void ABomerMan_ExamenGameMode::BeginPlay()
 {
 	Super::BeginPlay();
-	AEjercitoBuilder* Builder = NewObject<AEjercitoBuilder>();
-	Builder->SetComandanteLocation(FVector(-399.0f, 0.0f, 131.0f)); // Ubicación del comandante
-	Builder->SetEnemigoOrcoLocation(FVector(-299.0f, 0.0f, 131.0f)); // Ubicación del enemigo cuerpo a cuerpo
-	Builder->SetEnemigoCentauroLocation(FVector(-199.0f, 0.0f, 131.0f)); // Ubicación del enemigo a distancia
-	Builder->CrearComandante();
-	Builder->AgregarEnemigoOrco();
-	Builder->AgregarEnemigoCentauro();
-	Builder->ConstruirEjercito();
-	AComandante* Comandante = Builder->ObtenerComandante();
-	TArray<IInterEnemigo*> Enemigos = Builder->ObtenerEnemigos();
+        // Spawn del Builder actor en el mundo
+        FVector BuilderLocation(0.0f, 0.0f, 0.0f); // Cambia esto a la ubicación deseada
+        AEjercitoBuilder* Builder = GetWorld()->SpawnActor<AEjercitoBuilder>(AEjercitoBuilder::StaticClass(), BuilderLocation, FRotator::ZeroRotator);
+        // Spawn del Director actor en el mundo
+        FVector DirectorLocation(0.0f, 0.0f, 0.0f); // Cambia esto a la ubicación deseada
+        AEjercitoDirector* Director = GetWorld()->SpawnActor<AEjercitoDirector>(AEjercitoDirector::StaticClass(), DirectorLocation, FRotator::ZeroRotator);
+        if (Builder && Director)
+        {
+            // Setear el builder en el director
+            Director->SetBuilder(Builder);
+            // Invocar la construcción del ejército
+            Director->ConstruirEjercitoCompleto(GetWorld());
+        }
+        else
+        {
+            UE_LOG(LogTemp, Warning, TEXT("No se pudo crear Builder o Director"));
+        }
 }

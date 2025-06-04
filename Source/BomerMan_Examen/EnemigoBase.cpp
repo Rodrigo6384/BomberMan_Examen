@@ -9,17 +9,18 @@ AEnemigoBase::AEnemigoBase()
  	// Set this actor to call Tick() every frame.  You can turn this off to improve performance if you don't need it.
 	PrimaryActorTick.bCanEverTick = true;
 
-	MallaEnemigoBase = CreateDefaultSubobject<UStaticMeshComponent>(TEXT("MallaBloque"));
-	//RootComponent = MeshComp;
-	MallaEnemigoBase->SetupAttachment(RootComponent);
+    // Crear el RootComponent
+    // Crear el componente de malla
+    MallaEnemigoBase = CreateDefaultSubobject<UStaticMeshComponent>(TEXT("MallaBloque"));
+    MallaEnemigoBase->SetupAttachment(RootComponent); // Adjuntar la malla al RootComponent
+    // Cargar la malla
+    static ConstructorHelpers::FObjectFinder<UStaticMesh> ObjetoMallaEnemigoBase(TEXT("StaticMesh'/Game/StarterContent/Shapes/Shape_Sphere.Shape_Sphere'"));
 
-	static ConstructorHelpers::FObjectFinder<UStaticMesh> ObjetoMallaEnemigoBase(TEXT("StaticMesh'/Game/StarterContent/Shapes/Shape_Sphere.Shape_Sphere'"));
-
-	if (ObjetoMallaEnemigoBase.Succeeded())
-	{
-		MallaEnemigoBase->SetStaticMesh(ObjetoMallaEnemigoBase.Object);
-		MallaEnemigoBase->SetRelativeScale3D(FVector(1.0f, 1.0f, 1.0f));
-	}
+    if (ObjetoMallaEnemigoBase.Succeeded())
+    {
+        MallaEnemigoBase->SetStaticMesh(ObjetoMallaEnemigoBase.Object);
+        MallaEnemigoBase->SetRelativeScale3D(FVector(1.0f, 1.0f, 1.0f));
+    }
 
 }
 

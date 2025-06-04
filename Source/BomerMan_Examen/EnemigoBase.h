@@ -23,7 +23,7 @@ protected:
 public:	
 	// Called every frame
 	virtual void Tick(float DeltaTime) override;
-	virtual void Atacar();
-	virtual void Defender();
+	void Atacar();
+	void Defender();
 
 };
