@@ -27,4 +27,9 @@ public:
 
 	// Interface method to get wall material name
 	virtual FString GetMaterialName() const = 0;
+	// Nuevo comportamiento individual
+	virtual void AccionIndividual() = 0;
+
+	// Nuevo comportamiento grupal
+	virtual void AccionGrupal() = 0;
 };

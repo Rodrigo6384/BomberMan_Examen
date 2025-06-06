@@ -14,3 +14,13 @@ AMuroHierro::AMuroHierro()
 		MallaMuroBase->SetMaterial(0, ObjetoMaterial.Object);
 	}
 }
+
+void AMuroHierro::AccionIndividual()
+{
+	GEngine->AddOnScreenDebugMessage(-1, 20.f, FColor::Green, TEXT("Accion individual: Muro de Hierro se calienta"));
+}
+
+void AMuroHierro::AccionGrupal()
+{
+	GEngine->AddOnScreenDebugMessage(-1, 20.f, FColor::Orange, TEXT("Accion grupal: Todos los muros de Hierro resuenan"));
+}

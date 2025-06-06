@@ -5,6 +5,7 @@
 #include "MuroHierro.h"
 #include "MuroMadera.h"
 #include "MuroConcreto.h"
+#include "InterMuros.h"
 
 // Sets default values
 AFabrica_Muros::AFabrica_Muros()
@@ -44,7 +45,43 @@ AMuroBase* AFabrica_Muros::CreateMuros(const FString& BlockName, FVector Locatio
     {
         NuevoMuro = GetWorld()->SpawnActor<AMuroConcreto>(AMuroConcreto::StaticClass(), Location, FRotator::ZeroRotator);
     }
+    if (NuevoMuro && NuevoMuro->GetClass()->ImplementsInterface(UInterMuros::StaticClass()))
+    {
+        IInterMuros* Interfaz = Cast<IInterMuros>(NuevoMuro);
+        if (Interfaz)
+        {
+            FString MaterialName = Interfaz->GetMaterialName();
+            // Mensaje en pantalla con el tipo de muro
+            GEngine->AddOnScreenDebugMessage(-1, 20.f, FColor::Yellow, FString::Printf(TEXT("Muro generado: %s"), *MaterialName));
+            TodosLosMuros.Add(Interfaz);
+        }
+    }
 
     return NuevoMuro;
+}
+
+void AFabrica_Muros::EjecutarComportamientoMuros()
+{
+    TMap<FString, TArray<IInterMuros*>> MurosPorTipo;
+
+    for (IInterMuros* Interfaz : TodosLosMuros)
+    {
+        // Acción individual
+        Interfaz->AccionIndividual();
+
+        // Agrupar por tipo
+        FString Tipo = Interfaz->GetMaterialName();
+        MurosPorTipo.FindOrAdd(Tipo).Add(Interfaz);
+    }
+
+    // Ejecutar acción grupal por tipo
+    for (auto& Par : MurosPorTipo)
+    {
+        if (Par.Value.Num() > 0)
+        {
+            Par.Value[0]->AccionGrupal(); // Usamos el primer muro como representante
+        }
+    }
+
 }
 

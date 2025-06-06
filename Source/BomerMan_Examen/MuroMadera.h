@@ -16,4 +16,6 @@ class BOMERMAN_EXAMEN_API AMuroMadera : public AMuroBase
 public:
 	// Constructor
 	AMuroMadera();
+	void AccionIndividual() override;
+	void AccionGrupal() override;
 };

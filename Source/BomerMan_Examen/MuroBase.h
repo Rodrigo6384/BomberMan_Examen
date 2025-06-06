@@ -28,5 +28,7 @@ public:
 	virtual void Tick(float DeltaTime) override;
 	// Implementación del método de la interfaz para obtener el nombre del material
 	FString GetMaterialName() const;
+	void AccionIndividual() override;
+	void AccionGrupal() override;
 
 };

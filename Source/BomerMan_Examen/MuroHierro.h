@@ -16,5 +16,6 @@ class BOMERMAN_EXAMEN_API AMuroHierro : public AMuroBase
 public:
 	// Constructor
 	AMuroHierro();
-	
+	void AccionIndividual() override;
+	void AccionGrupal() override;
 };

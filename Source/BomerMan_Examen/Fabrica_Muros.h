@@ -27,4 +27,11 @@ public:
 	UFUNCTION(BlueprintCallable, Category = "Wall Factory")
 	AMuroBase* CreateMuros(const FString& BlockName, FVector Location);
 
+	// NUEVO: Ejecutar comportamiento de todos los muros creados
+	void EjecutarComportamientoMuros();
+
+private:
+	// Guardar todos los muros que implementan la interfaz
+	TArray<IInterMuros*> TodosLosMuros;
+
 };

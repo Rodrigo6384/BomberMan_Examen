@@ -14,3 +14,13 @@ AMuroConcreto::AMuroConcreto()
 		MallaMuroBase->SetMaterial(0, ObjetoMaterial.Object);
 	}
 }
+
+void AMuroConcreto::AccionIndividual()
+{
+	GEngine->AddOnScreenDebugMessage(-1, 20.f, FColor::Green, TEXT("Accion individual: Muro de Concreto se agrieta"));
+}
+
+void AMuroConcreto::AccionGrupal()
+{
+	GEngine->AddOnScreenDebugMessage(-1, 20.f, FColor::Orange, TEXT("Accion grupal: Todos los muros de Concreto resuenan"));
+}

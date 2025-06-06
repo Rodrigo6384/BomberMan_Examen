@@ -49,16 +49,21 @@ void ABomerMan_ExamenGameMode::GenerarLaberinto()
 {
     const float Espaciado = 100.f;
     FVector Origen = FVector(-2350.0f, -1950.0f, 130.0f);
+    // Guardar tipos únicos de muro
+    TSet<FString> TiposDeMuros;
+
+    // Agrupar referencias a muros por tipo
+    TMap<FString, TArray<IInterMuros*>> MurosPorTipo;
 
     MatrizMuros.SetNum(Laberinto1.Num());
 
-    for (int32 i = 0; i < Laberinto1.Num(); ++i)
+    for (int i = 0; i < Laberinto1.Num(); ++i)
     {
         MatrizMuros[i].SetNum(Laberinto1[i].Num());
 
-        for (int32 j = 0; j < Laberinto1[i].Num(); ++j)
+        for (int j = 0; j < Laberinto1[i].Num(); ++j)
         {
-            int32 Tipo = Laberinto1[i][j];
+            int Tipo = Laberinto1[i][j];
             FString NombreMuro;
 
             switch (Tipo)
@@ -72,17 +77,8 @@ void ABomerMan_ExamenGameMode::GenerarLaberinto()
             FVector Posicion = Origen + FVector(i * Espaciado, j * Espaciado, 0.f);
             AMuroBase* Muro = MuroFactoryPtr->CreateMuros(NombreMuro, Posicion);
             MatrizMuros[i][j] = Muro;
-            // ? Llamar a la interfaz si el actor implementa InterMuros
-                if (Muro)
-                {
-                    IInterMuros* Interfaz = Cast<IInterMuros>(Muro);
-                    if (Interfaz)
-                    {
-                        FString MaterialName = Interfaz->GetMaterialName();
-                        // Mensaje en pantalla con el tipo de muro
-                        GEngine->AddOnScreenDebugMessage(-1, 20.f, FColor::Yellow,FString::Printf(TEXT("Muro generado: %s"), *MaterialName));
-                    }
-                }
+
         }
     }
+    MuroFactoryPtr->EjecutarComportamientoMuros();
 }

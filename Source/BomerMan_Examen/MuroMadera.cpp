@@ -14,3 +14,13 @@ AMuroMadera::AMuroMadera()
 	}
 
 }
+
+void AMuroMadera::AccionIndividual()
+{
+	GEngine->AddOnScreenDebugMessage(-1, 20.f, FColor::Green, TEXT("Accion individual: Muro de Madera se está astillando"));
+}
+
+void AMuroMadera::AccionGrupal()
+{
+	GEngine->AddOnScreenDebugMessage(-1, 20.f, FColor::Orange, TEXT("Accion grupal: Todos los muros de Madera vibran"));
+}

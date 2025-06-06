@@ -45,3 +45,15 @@ FString AMuroBase::GetMaterialName() const
 	return MaterialName;
 }
 
+void AMuroBase::AccionIndividual()
+{
+	// Implementación del comportamiento individual
+	GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Green, FString::Printf(TEXT("Acción individual del muro: %s"), *MaterialName));
+}
+
+void AMuroBase::AccionGrupal()
+{
+	// Implementación del comportamiento grupal
+	GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Blue, FString::Printf(TEXT("Acción grupal del muro: %s"), *MaterialName));
+}
+
