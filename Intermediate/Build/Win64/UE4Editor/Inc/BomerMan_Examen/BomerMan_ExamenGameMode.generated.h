@@ -59,7 +59,7 @@ public: \
 
 
 #define BomerMan_Examen_Source_BomerMan_Examen_BomerMan_ExamenGameMode_h_12_PRIVATE_PROPERTY_OFFSET
-#define BomerMan_Examen_Source_BomerMan_Examen_BomerMan_ExamenGameMode_h_9_PROLOG
+#define BomerMan_Examen_Source_BomerMan_Examen_BomerMan_ExamenGameMode_h_10_PROLOG
 #define BomerMan_Examen_Source_BomerMan_Examen_BomerMan_ExamenGameMode_h_12_GENERATED_BODY_LEGACY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \

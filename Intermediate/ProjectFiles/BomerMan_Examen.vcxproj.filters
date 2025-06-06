@@ -3,7 +3,7 @@
   <ItemGroup>
     <None Include="..\..\BomerMan_Examen.uproject" />
     <Filter Include="Source">
-      <UniqueIdentifier>{4239254B-7DB7-443F-B382-40D4DA64FAD7}</UniqueIdentifier>
+      <UniqueIdentifier>{92A83416-E48A-49E2-901D-51792EE6BB45}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Source\BomerMan_Examen.Target.cs">
       <Filter>Source</Filter>
@@ -15,7 +15,7 @@
     <None Include="..\..\.gitignore" />
     <None Include="..\..\README.md" />
     <Filter Include="Config">
-      <UniqueIdentifier>{23F9C01E-FE44-46DE-ACE3-371EB04C053A}</UniqueIdentifier>
+      <UniqueIdentifier>{E85AD80B-1204-494C-9FA8-E77B12806A24}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Config\DefaultEditor.ini">
       <Filter>Config</Filter>
@@ -33,7 +33,7 @@
       <Filter>Config</Filter>
     </None>
     <Filter Include="Source\BomerMan_Examen">
-      <UniqueIdentifier>{60AE33C8-39E1-4DA8-8933-FF0DC0C23D1C}</UniqueIdentifier>
+      <UniqueIdentifier>{F761FAB7-EA91-480B-9326-6EB2B8AEA3DA}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Source\BomerMan_Examen\BomerMan_Examen.Build.cs">
       <Filter>Source\BomerMan_Examen</Filter>
@@ -92,6 +92,12 @@
     <ClInclude Include="..\..\Source\BomerMan_Examen\EnemigoOrco.h">
       <Filter>Source\BomerMan_Examen</Filter>
     </ClInclude>
+    <ClCompile Include="..\..\Source\BomerMan_Examen\Fabrica_Muros.cpp">
+      <Filter>Source\BomerMan_Examen</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\BomerMan_Examen\Fabrica_Muros.h">
+      <Filter>Source\BomerMan_Examen</Filter>
+    </ClInclude>
     <ClCompile Include="..\..\Source\BomerMan_Examen\InterComandante.cpp">
       <Filter>Source\BomerMan_Examen</Filter>
     </ClCompile>
@@ -102,6 +108,36 @@
       <Filter>Source\BomerMan_Examen</Filter>
     </ClCompile>
     <ClInclude Include="..\..\Source\BomerMan_Examen\InterEnemigo.h">
+      <Filter>Source\BomerMan_Examen</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\BomerMan_Examen\InterMuros.cpp">
+      <Filter>Source\BomerMan_Examen</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\BomerMan_Examen\InterMuros.h">
+      <Filter>Source\BomerMan_Examen</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\BomerMan_Examen\MuroBase.cpp">
+      <Filter>Source\BomerMan_Examen</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\BomerMan_Examen\MuroBase.h">
+      <Filter>Source\BomerMan_Examen</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\BomerMan_Examen\MuroConcreto.cpp">
+      <Filter>Source\BomerMan_Examen</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\BomerMan_Examen\MuroConcreto.h">
+      <Filter>Source\BomerMan_Examen</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\BomerMan_Examen\MuroHierro.cpp">
+      <Filter>Source\BomerMan_Examen</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\BomerMan_Examen\MuroHierro.h">
+      <Filter>Source\BomerMan_Examen</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\BomerMan_Examen\MuroMadera.cpp">
+      <Filter>Source\BomerMan_Examen</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\BomerMan_Examen\MuroMadera.h">
       <Filter>Source\BomerMan_Examen</Filter>
     </ClInclude>
   </ItemGroup>
