@@ -21,3 +21,9 @@ void AEnemigoCentauro::Defender()
 {
 	GEngine->AddOnScreenDebugMessage(-1, 20.f, FColor::Black, FString::Printf(TEXT("El centauro defiende con escudo ")));
 }
+
+AActor* AEnemigoCentauro::Clonar(FVector Posicion)
+{
+    return GetWorld()->SpawnActor<AEnemigoCentauro>(GetClass(), Posicion, FRotator::ZeroRotator);
+}
+

@@ -72,7 +72,7 @@ void EmptyLinkFunctionForGeneratedCodeEnemigoOrco() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(AEnemigoOrco, 1024416395);
+	IMPLEMENT_CLASS(AEnemigoOrco, 2269725750);
 	template<> BOMERMAN_EXAMEN_API UClass* StaticClass<AEnemigoOrco>()
 	{
 		return AEnemigoOrco::StaticClass();

@@ -52,7 +52,7 @@ AMuroBase* AFabrica_Muros::CreateMuros(const FString& BlockName, FVector Locatio
         {
             FString MaterialName = Interfaz->GetMaterialName();
             // Mensaje en pantalla con el tipo de muro
-            GEngine->AddOnScreenDebugMessage(-1, 20.f, FColor::Yellow, FString::Printf(TEXT("Muro generado: %s"), *MaterialName));
+           // GEngine->AddOnScreenDebugMessage(-1, 20.f, FColor::Yellow, FString::Printf(TEXT("Muro generado: %s"), *MaterialName));
             TodosLosMuros.Add(Interfaz);
         }
     }
@@ -67,7 +67,8 @@ void AFabrica_Muros::EjecutarComportamientoMuros()
     for (IInterMuros* Interfaz : TodosLosMuros)
     {
         // Acción individual
-        Interfaz->AccionIndividual();
+        // se usa para activar l acacion individul de los bloques creados
+        //Interfaz->AccionIndividual();
 
         // Agrupar por tipo
         FString Tipo = Interfaz->GetMaterialName();
@@ -79,7 +80,8 @@ void AFabrica_Muros::EjecutarComportamientoMuros()
     {
         if (Par.Value.Num() > 0)
         {
-            Par.Value[0]->AccionGrupal(); // Usamos el primer muro como representante
+			// Ejecutar acción grupal para el tipo de muro
+            //Par.Value[0]->AccionGrupal(); // Usamos el primer muro como representante
         }
     }
 

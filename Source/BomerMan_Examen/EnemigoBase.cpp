@@ -47,3 +47,8 @@ void AEnemigoBase::Defender()
 	GEngine->AddOnScreenDebugMessage(-1, 7., FColor::Red, FString::Printf(TEXT("El enemigo Defiende")));
 }
 
+AActor* AEnemigoBase::Clonar(FVector Posicion)
+{
+    return GetWorld()->SpawnActor<AEnemigoBase>(GetClass(), Posicion, FRotator::ZeroRotator);;
+}
+

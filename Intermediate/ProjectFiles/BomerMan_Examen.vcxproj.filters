@@ -3,7 +3,7 @@
   <ItemGroup>
     <None Include="..\..\BomerMan_Examen.uproject" />
     <Filter Include="Source">
-      <UniqueIdentifier>{91B66446-7C85-47C3-8F60-AA427D6844AF}</UniqueIdentifier>
+      <UniqueIdentifier>{F5F55EBE-0025-4596-86FB-4618AEAF25FE}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Source\BomerMan_Examen.Target.cs">
       <Filter>Source</Filter>
@@ -16,7 +16,7 @@
     <None Include="..\..\README.md" />
     <None Include="..\..\Source.zip" />
     <Filter Include="Config">
-      <UniqueIdentifier>{A1CE458D-367A-45D7-9FE7-61A6185154C4}</UniqueIdentifier>
+      <UniqueIdentifier>{B7C4FDD8-4F2E-4D8A-8D9D-57A49E822BE6}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Config\DefaultEditor.ini">
       <Filter>Config</Filter>
@@ -34,7 +34,7 @@
       <Filter>Config</Filter>
     </None>
     <Filter Include="Source\BomerMan_Examen">
-      <UniqueIdentifier>{BF9309AF-509B-4666-AF10-805AF032CC5E}</UniqueIdentifier>
+      <UniqueIdentifier>{1AE61A14-2A4D-4BDC-9488-646C94B52E70}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Source\BomerMan_Examen\BomerMan_Examen.Build.cs">
       <Filter>Source\BomerMan_Examen</Filter>
@@ -121,6 +121,12 @@
       <Filter>Source\BomerMan_Examen</Filter>
     </ClCompile>
     <ClInclude Include="..\..\Source\BomerMan_Examen\InterMuros.h">
+      <Filter>Source\BomerMan_Examen</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\BomerMan_Examen\InterPrototypeEnemigo.cpp">
+      <Filter>Source\BomerMan_Examen</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\BomerMan_Examen\InterPrototypeEnemigo.h">
       <Filter>Source\BomerMan_Examen</Filter>
     </ClInclude>
     <ClCompile Include="..\..\Source\BomerMan_Examen\LaberintoBasicoBuilder.cpp">

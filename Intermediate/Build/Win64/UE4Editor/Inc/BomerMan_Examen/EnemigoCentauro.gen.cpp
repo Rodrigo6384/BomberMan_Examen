@@ -72,7 +72,7 @@ void EmptyLinkFunctionForGeneratedCodeEnemigoCentauro() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(AEnemigoCentauro, 3411650264);
+	IMPLEMENT_CLASS(AEnemigoCentauro, 4242182514);
 	template<> BOMERMAN_EXAMEN_API UClass* StaticClass<AEnemigoCentauro>()
 	{
 		return AEnemigoCentauro::StaticClass();

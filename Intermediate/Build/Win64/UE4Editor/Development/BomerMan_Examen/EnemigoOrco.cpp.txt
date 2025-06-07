@@ -3,5 +3,7 @@ C:\Users\DAVID\Desktop\SIS_457\BomerMan_Examen\Source\BomerMan_Examen\EnemigoOrc
 C:\Users\DAVID\Desktop\SIS_457\BomerMan_Examen\Source\BomerMan_Examen\EnemigoBase.h
 C:\Users\DAVID\Desktop\SIS_457\BomerMan_Examen\Source\BomerMan_Examen\InterEnemigo.h
 C:\Users\DAVID\Desktop\SIS_457\BomerMan_Examen\Intermediate\Build\Win64\UE4Editor\Inc\BomerMan_Examen\InterEnemigo.generated.h
+C:\Users\DAVID\Desktop\SIS_457\BomerMan_Examen\Source\BomerMan_Examen\InterPrototypeEnemigo.h
+C:\Users\DAVID\Desktop\SIS_457\BomerMan_Examen\Intermediate\Build\Win64\UE4Editor\Inc\BomerMan_Examen\InterPrototypeEnemigo.generated.h
 C:\Users\DAVID\Desktop\SIS_457\BomerMan_Examen\Intermediate\Build\Win64\UE4Editor\Inc\BomerMan_Examen\EnemigoBase.generated.h
 C:\Users\DAVID\Desktop\SIS_457\BomerMan_Examen\Intermediate\Build\Win64\UE4Editor\Inc\BomerMan_Examen\EnemigoOrco.generated.h

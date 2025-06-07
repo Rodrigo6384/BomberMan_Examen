@@ -4,6 +4,7 @@
 
 #include "CoreMinimal.h"
 #include "Fabrica_Muros.h"
+#include "EnemigoCentauro.h"
 #include "GameFramework/GameModeBase.h"
 #include "BomerMan_ExamenGameMode.generated.h"
 
@@ -19,6 +20,10 @@ public:
 
 private:
 	AFabrica_Muros* MuroFactoryPtr;
+public:
+	void CrearEjercitoBuilder();
+	void CrearLaberintoBuilder();
+	void CrearClon();
 
 };
 

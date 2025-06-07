@@ -54,12 +54,12 @@ void AEjercitoBuilder::AgregarEnemigoCentauro(int Cantidad)
 void AEjercitoBuilder::ConstruirEjercito()
 {
 	if (Comandante) {
-		//Comandante->DarOrdenes();
-		//Comandante->Estrategia();
+		Comandante->DarOrdenes();
+		Comandante->Estrategia();
 	}
 	for (IInterEnemigo* Enemigo : Enemigos) {
 		Enemigo->Atacar();
-		Enemigo->Defender();
+		//Enemigo->Defender();
 	}
 }
 

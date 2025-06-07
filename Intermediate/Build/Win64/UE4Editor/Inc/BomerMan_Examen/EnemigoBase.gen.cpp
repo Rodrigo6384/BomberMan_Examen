@@ -18,6 +18,7 @@ void EmptyLinkFunctionForGeneratedCodeEnemigoBase() {}
 	ENGINE_API UClass* Z_Construct_UClass_AActor();
 	UPackage* Z_Construct_UPackage__Script_BomerMan_Examen();
 	BOMERMAN_EXAMEN_API UClass* Z_Construct_UClass_UInterEnemigo_NoRegister();
+	BOMERMAN_EXAMEN_API UClass* Z_Construct_UClass_UInterPrototypeEnemigo_NoRegister();
 // End Cross Module References
 	void AEnemigoBase::StaticRegisterNativesAEnemigoBase()
 	{
@@ -48,6 +49,7 @@ void EmptyLinkFunctionForGeneratedCodeEnemigoBase() {}
 #endif
 		const UE4CodeGen_Private::FImplementedInterfaceParams Z_Construct_UClass_AEnemigoBase_Statics::InterfaceParams[] = {
 			{ Z_Construct_UClass_UInterEnemigo_NoRegister, (int32)VTABLE_OFFSET(AEnemigoBase, IInterEnemigo), false },
+			{ Z_Construct_UClass_UInterPrototypeEnemigo_NoRegister, (int32)VTABLE_OFFSET(AEnemigoBase, IInterPrototypeEnemigo), false },
 		};
 	const FCppClassTypeInfoStatic Z_Construct_UClass_AEnemigoBase_Statics::StaticCppClassTypeInfo = {
 		TCppClassTypeTraits<AEnemigoBase>::IsAbstract,
@@ -76,7 +78,7 @@ void EmptyLinkFunctionForGeneratedCodeEnemigoBase() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(AEnemigoBase, 1524142148);
+	IMPLEMENT_CLASS(AEnemigoBase, 4255786420);
 	template<> BOMERMAN_EXAMEN_API UClass* StaticClass<AEnemigoBase>()
 	{
 		return AEnemigoBase::StaticClass();

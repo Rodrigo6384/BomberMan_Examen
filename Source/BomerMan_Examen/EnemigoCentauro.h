@@ -18,4 +18,5 @@ public:
 public:
 	void Atacar() override;
 	void Defender() override;
+	AActor* Clonar(FVector Posicion) override;
 };

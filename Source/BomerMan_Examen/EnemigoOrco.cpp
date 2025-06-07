@@ -20,4 +20,8 @@ void AEnemigoOrco::Atacar()
 void AEnemigoOrco::Defender()
 {
 	GEngine->AddOnScreenDebugMessage(-1, 20.0f, FColor::Green, TEXT("El orco se defiende con su escudo!"));
-}	
+}
+AActor* AEnemigoOrco::Clonar(FVector Posicion)
+{
+    return GetWorld()->SpawnActor<AEnemigoOrco>(GetClass(), Posicion, FRotator::ZeroRotator);
+}
