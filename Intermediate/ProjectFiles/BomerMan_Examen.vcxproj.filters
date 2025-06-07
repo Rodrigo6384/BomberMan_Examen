@@ -3,7 +3,7 @@
   <ItemGroup>
     <None Include="..\..\BomerMan_Examen.uproject" />
     <Filter Include="Source">
-      <UniqueIdentifier>{F5F55EBE-0025-4596-86FB-4618AEAF25FE}</UniqueIdentifier>
+      <UniqueIdentifier>{83D50C91-A207-46F9-A3A2-6E0CBD583FFB}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Source\BomerMan_Examen.Target.cs">
       <Filter>Source</Filter>
@@ -16,7 +16,7 @@
     <None Include="..\..\README.md" />
     <None Include="..\..\Source.zip" />
     <Filter Include="Config">
-      <UniqueIdentifier>{B7C4FDD8-4F2E-4D8A-8D9D-57A49E822BE6}</UniqueIdentifier>
+      <UniqueIdentifier>{4F12B2C9-1333-41BA-B2AE-2C5432DC4412}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Config\DefaultEditor.ini">
       <Filter>Config</Filter>
@@ -34,7 +34,7 @@
       <Filter>Config</Filter>
     </None>
     <Filter Include="Source\BomerMan_Examen">
-      <UniqueIdentifier>{1AE61A14-2A4D-4BDC-9488-646C94B52E70}</UniqueIdentifier>
+      <UniqueIdentifier>{8CA626B0-4EE4-4C43-8CE7-90D038FE8CE7}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Source\BomerMan_Examen\BomerMan_Examen.Build.cs">
       <Filter>Source\BomerMan_Examen</Filter>
@@ -99,6 +99,12 @@
     <ClInclude Include="..\..\Source\BomerMan_Examen\Fabrica_Muros.h">
       <Filter>Source\BomerMan_Examen</Filter>
     </ClInclude>
+    <ClCompile Include="..\..\Source\BomerMan_Examen\FachadaJuego.cpp">
+      <Filter>Source\BomerMan_Examen</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\BomerMan_Examen\FachadaJuego.h">
+      <Filter>Source\BomerMan_Examen</Filter>
+    </ClInclude>
     <ClCompile Include="..\..\Source\BomerMan_Examen\InterComandante.cpp">
       <Filter>Source\BomerMan_Examen</Filter>
     </ClCompile>
@@ -109,6 +115,12 @@
       <Filter>Source\BomerMan_Examen</Filter>
     </ClCompile>
     <ClInclude Include="..\..\Source\BomerMan_Examen\InterEnemigo.h">
+      <Filter>Source\BomerMan_Examen</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\BomerMan_Examen\InterFachadaJuego.cpp">
+      <Filter>Source\BomerMan_Examen</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\BomerMan_Examen\InterFachadaJuego.h">
       <Filter>Source\BomerMan_Examen</Filter>
     </ClInclude>
     <ClCompile Include="..\..\Source\BomerMan_Examen\InterLaberintoBuilder.cpp">
