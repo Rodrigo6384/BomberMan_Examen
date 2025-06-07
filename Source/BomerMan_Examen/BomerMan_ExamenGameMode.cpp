@@ -7,6 +7,8 @@
 #include "EnemigoOrco.h"
 #include "EnemigoCentauro.h"
 #include "InterMuros.h"
+#include "LaberintoBasicoBuilder.h"
+#include "LaberintoDirector.h"
 #include "UObject/ConstructorHelpers.h"
 
 ABomerMan_ExamenGameMode::ABomerMan_ExamenGameMode()
@@ -22,63 +24,22 @@ ABomerMan_ExamenGameMode::ABomerMan_ExamenGameMode()
 void ABomerMan_ExamenGameMode::BeginPlay()
 {
 	Super::BeginPlay();
-        //// Spawn del Builder actor en el mundo
-        //AEjercitoBuilder* Builder = GetWorld()->SpawnActor<AEjercitoBuilder>(AEjercitoBuilder::StaticClass(), FVector::ZeroVector, FRotator::ZeroRotator);
-        //// Spawn del Director actor en el mundo
-        //AEjercitoDirector* Director = GetWorld()->SpawnActor<AEjercitoDirector>(AEjercitoDirector::StaticClass(), FVector::ZeroVector, FRotator::ZeroRotator);
-        //// Setear el builder en el director
-        //Director->SetBuilder(Builder);
-        //// Invocar la construcción del ejército
-        //Director->ConstruirEjercitoCompleto(GetWorld());
+    // Spawn del Builder actor en el mundo
+    AEjercitoBuilder* BuilderEjercito = GetWorld()->SpawnActor<AEjercitoBuilder>(AEjercitoBuilder::StaticClass(), FVector::ZeroVector, FRotator::ZeroRotator);
+    // Spawn del Director actor en el mundo
+    AEjercitoDirector* DirectorEjercito = GetWorld()->SpawnActor<AEjercitoDirector>(AEjercitoDirector::StaticClass(), FVector::ZeroVector, FRotator::ZeroRotator);
+    // Setear el builder en el director
+    DirectorEjercito->SetBuilder(BuilderEjercito);
+    // Invocar la construcción del ejército
+    DirectorEjercito->ConstruirEjercitoCompleto(GetWorld());
 
 
-        //Fabrica de muros--------------------------
-        MuroFactoryPtr = GetWorld()->SpawnActor<AFabrica_Muros>(AFabrica_Muros::StaticClass(), FVector::ZeroVector, FRotator::ZeroRotator);
+	// Generar el laberinto ----------------------
+    MuroFactoryPtr = GetWorld()->SpawnActor<AFabrica_Muros>();
+    // Crear builder y director
+    ALaberintoBasicoBuilder* Builder = GetWorld()->SpawnActor<ALaberintoBasicoBuilder>();
+    ALaberintoDirector* Director = GetWorld()->SpawnActor<ALaberintoDirector>();
 
-        // Ejemplo de laberinto manual:
-        Laberinto1 = {
-            {1, 0, 2},
-            {0, 3, 1},
-            {2, 1, 0}
-        };
-
-        GenerarLaberinto();
-}
-
-void ABomerMan_ExamenGameMode::GenerarLaberinto()
-{
-    const float Espaciado = 100.f;
-    FVector Origen = FVector(-2350.0f, -1950.0f, 130.0f);
-    // Guardar tipos únicos de muro
-    TSet<FString> TiposDeMuros;
-
-    // Agrupar referencias a muros por tipo
-    TMap<FString, TArray<IInterMuros*>> MurosPorTipo;
-
-    MatrizMuros.SetNum(Laberinto1.Num());
-
-    for (int i = 0; i < Laberinto1.Num(); ++i)
-    {
-        MatrizMuros[i].SetNum(Laberinto1[i].Num());
-
-        for (int j = 0; j < Laberinto1[i].Num(); ++j)
-        {
-            int Tipo = Laberinto1[i][j];
-            FString NombreMuro;
-
-            switch (Tipo)
-            {
-            case 1: NombreMuro = TEXT("Muro_Madera"); break;
-            case 2: NombreMuro = TEXT("Muro_Concreto"); break;
-            case 3: NombreMuro = TEXT("Muro_Hierro"); break;
-            default: continue; // No crear muro si es 0
-            }
-
-            FVector Posicion = Origen + FVector(i * Espaciado, j * Espaciado, 0.f);
-            AMuroBase* Muro = MuroFactoryPtr->CreateMuros(NombreMuro, Posicion);
-            MatrizMuros[i][j] = Muro;
-
-        }
-    }
-    MuroFactoryPtr->EjecutarComportamientoMuros();
+    Director->SetBuilder(Builder);
+    Director->ConstruirLaberinto(GetWorld(), MuroFactoryPtr);
 }

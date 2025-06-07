@@ -16,12 +16,10 @@ public:
 
 	
 	virtual void BeginPlay() override;
-private:
-	TArray<TArray<AMuroBase*>> MatrizMuros;
-	TArray<TArray<int32>> Laberinto1;
 
+private:
 	AFabrica_Muros* MuroFactoryPtr;
-	void GenerarLaberinto();
+
 };
 
 
