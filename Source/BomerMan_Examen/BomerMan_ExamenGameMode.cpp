@@ -4,6 +4,8 @@
 #include "BomerMan_ExamenCharacter.h"
 #include "FachadaJuego.h"
 #include "InterFachadaJuego.h"
+#include "BombaHielo.h"
+#include "BombaFuego.h"
 #include "UObject/ConstructorHelpers.h"
 
 ABomerMan_ExamenGameMode::ABomerMan_ExamenGameMode()
@@ -33,5 +35,6 @@ void ABomerMan_ExamenGameMode::BeginPlay()
 		Fachada->ConstruirLaberinto(GetWorld());
 		//Fachada->ConstruirEjercito(GetWorld());
 		//Fachada->ClonarEnemigo(GetWorld(), FVector(-450, -840, 140));
+		//Fachada->GenerarBombas(GetWorld());
 	}
 }

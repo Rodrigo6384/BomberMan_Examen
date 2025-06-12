@@ -36,8 +36,11 @@ void ALaberintoDirector::ConstruirLaberinto(UWorld* World, AFabrica_Muros* Fabri
 	if (Builder)
 	{
 		Builder->Reset();
-		Builder->GenerarMatriz();
-		Builder->ConstruirMuros(World, Fabrica);
+		//Builder->GenerarMatriz();
+		//Builder->ConstruirMuros(World, Fabrica);
+		Builder->GenerarZonaSuperior(World, Fabrica);
+		Builder->GenerarZonaCentral(World, Fabrica);
+		Builder->GenerarZonaInferior(World, Fabrica);
 	}
 }
 

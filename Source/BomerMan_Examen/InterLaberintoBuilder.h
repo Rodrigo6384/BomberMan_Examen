@@ -23,6 +23,9 @@ class BOMERMAN_EXAMEN_API IInterLaberintoBuilder
 	// Add interface functions to this class. This is the class that will be inherited to implement this interface.
 public:
 	virtual void Reset() = 0;
-	virtual void GenerarMatriz() = 0;
-	virtual void ConstruirMuros(UWorld* World, class AFabrica_Muros* Fabrica) = 0;
+	//virtual void GenerarMatriz() = 0;
+	virtual void GenerarZonaSuperior(UWorld* World, class AFabrica_Muros* Fabrica)=0;
+	virtual void GenerarZonaCentral(UWorld* World, class AFabrica_Muros* Fabrica)=0;
+	virtual void GenerarZonaInferior(UWorld* World, class AFabrica_Muros* Fabrica)=0;
+	//virtual void ConstruirMuros(UWorld* World, class AFabrica_Muros* Fabrica) = 0;
 };

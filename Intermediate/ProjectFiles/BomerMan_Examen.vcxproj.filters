@@ -3,7 +3,7 @@
   <ItemGroup>
     <None Include="..\..\BomerMan_Examen.uproject" />
     <Filter Include="Source">
-      <UniqueIdentifier>{83D50C91-A207-46F9-A3A2-6E0CBD583FFB}</UniqueIdentifier>
+      <UniqueIdentifier>{DB4D113E-95D9-4271-8C78-390BD7EFDCEA}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Source\BomerMan_Examen.Target.cs">
       <Filter>Source</Filter>
@@ -14,9 +14,9 @@
     <None Include="..\..\.gitattributes" />
     <None Include="..\..\.gitignore" />
     <None Include="..\..\README.md" />
-    <None Include="..\..\Source.zip" />
+    <None Include="..\..\Source (2).zip" />
     <Filter Include="Config">
-      <UniqueIdentifier>{4F12B2C9-1333-41BA-B2AE-2C5432DC4412}</UniqueIdentifier>
+      <UniqueIdentifier>{10D1C3B1-CC2E-4C5C-A27B-8543C2B22798}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Config\DefaultEditor.ini">
       <Filter>Config</Filter>
@@ -34,8 +34,32 @@
       <Filter>Config</Filter>
     </None>
     <Filter Include="Source\BomerMan_Examen">
-      <UniqueIdentifier>{8CA626B0-4EE4-4C43-8CE7-90D038FE8CE7}</UniqueIdentifier>
+      <UniqueIdentifier>{A28E0F88-8B7E-42F2-9945-36CE2933F2E5}</UniqueIdentifier>
     </Filter>
+    <ClCompile Include="..\..\Source\BomerMan_Examen\BombaBase.cpp">
+      <Filter>Source\BomerMan_Examen</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\BomerMan_Examen\BombaBase.h">
+      <Filter>Source\BomerMan_Examen</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\BomerMan_Examen\BombaComposite.cpp">
+      <Filter>Source\BomerMan_Examen</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\BomerMan_Examen\BombaComposite.h">
+      <Filter>Source\BomerMan_Examen</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\BomerMan_Examen\BombaFuego.cpp">
+      <Filter>Source\BomerMan_Examen</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\BomerMan_Examen\BombaFuego.h">
+      <Filter>Source\BomerMan_Examen</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\BomerMan_Examen\BombaHielo.cpp">
+      <Filter>Source\BomerMan_Examen</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\BomerMan_Examen\BombaHielo.h">
+      <Filter>Source\BomerMan_Examen</Filter>
+    </ClInclude>
     <None Include="..\..\Source\BomerMan_Examen\BomerMan_Examen.Build.cs">
       <Filter>Source\BomerMan_Examen</Filter>
     </None>
@@ -103,6 +127,12 @@
       <Filter>Source\BomerMan_Examen</Filter>
     </ClCompile>
     <ClInclude Include="..\..\Source\BomerMan_Examen\FachadaJuego.h">
+      <Filter>Source\BomerMan_Examen</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\BomerMan_Examen\InterBomba.cpp">
+      <Filter>Source\BomerMan_Examen</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\BomerMan_Examen\InterBomba.h">
       <Filter>Source\BomerMan_Examen</Filter>
     </ClInclude>
     <ClCompile Include="..\..\Source\BomerMan_Examen\InterComandante.cpp">

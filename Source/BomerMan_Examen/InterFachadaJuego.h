@@ -25,4 +25,5 @@ public:
 	virtual void ConstruirLaberinto(UWorld* World) = 0;
 	virtual void ConstruirEjercito(UWorld* World) = 0;
 	virtual void ClonarEnemigo(UWorld* World, FVector Posicion) = 0;
+	virtual void GenerarBombas(UWorld* World) = 0; // Nueva función para generar bombas
 };

@@ -10,6 +10,10 @@
 #include "EnemigoCentauro.h"
 #include "EnemigoOrco.h"
 #include "InterPrototypeEnemigo.h"
+#include "BombaHielo.h"
+#include "BombaFuego.h"
+#include "BombaComposite.h"
+#include "InterBomba.h"
 
 
 // Sets default values
@@ -79,3 +83,19 @@ void AFachadaJuego::ClonarEnemigo(UWorld* World, FVector Pos)
 
 }
 
+void AFachadaJuego::GenerarBombas(UWorld* World)
+{
+    // Crear bombas simples
+    ABombaHielo* Bomba1 = World->SpawnActor<ABombaHielo>(FVector(-2330.0f, -1400.0f, 200.0f), FRotator::ZeroRotator);
+    ABombaFuego* Bomba2 = World->SpawnActor<ABombaFuego>(FVector(-2330.0f, -1000.0f, 200.0f), FRotator::ZeroRotator);
+
+    // Crear bomba compuesta
+    ABombaComposite* BombaMaestra = GetWorld()->SpawnActor<ABombaComposite>();
+
+    BombaMaestra->AgregarBomba(Cast<IInterBomba>(Bomba1));
+    BombaMaestra->AgregarBomba(Cast<IInterBomba>(Bomba2));
+    if (BombaMaestra)
+    {
+        BombaMaestra->Detonar(); // Detona todo
+    }
+}

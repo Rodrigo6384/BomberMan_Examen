@@ -26,5 +26,5 @@ public:
 	void ConstruirLaberinto(UWorld* World) override;
 	void ConstruirEjercito(UWorld* World) override;
 	void ClonarEnemigo(UWorld* World, FVector Posicion) override;
-
+	void GenerarBombas(UWorld* World) override; // <-- Nueva función
 };
