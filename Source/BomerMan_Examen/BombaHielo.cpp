@@ -2,6 +2,7 @@
 
 
 #include "BombaHielo.h"
+#include "ComandoExplosionEnCruz.h"   
 
 ABombaHielo::ABombaHielo()
 {
@@ -20,4 +21,11 @@ void ABombaHielo::Detonar()
     // Aquí puedes agregar la lógica de detonación, como infligir daño a los enemigos cercanos o destruir la bomba.
         // Configurar el temporizador para detonar después de 4 segundos
     GetWorld()->GetTimerManager().SetTimer(TimerHandle_Detonacion, this, &ABombaBase::EjecutarDetonacion, 4.0f, false);
+}
+
+void ABombaHielo::BeginPlay()
+{
+    Super::BeginPlay();
+
+    SetComandoExplosion(ComandoExplosion);
 }

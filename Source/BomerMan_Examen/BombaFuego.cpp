@@ -2,6 +2,7 @@
 
 
 #include "BombaFuego.h"
+#include "ComandoExplosionEnCadena.h"
 
 ABombaFuego::ABombaFuego()
 {
@@ -19,4 +20,11 @@ void ABombaFuego::Detonar()
 	// Aquí puedes agregar la lógica de detonación, como infligir daño a los enemigos cercanos o destruir la bomba.
 	// Configurar el temporizador para detonar después de 4 segundos
 	GetWorld()->GetTimerManager().SetTimer(TimerHandle_Detonacion, this, &ABombaBase::EjecutarDetonacion, 4.0f, false);
+}
+
+void ABombaFuego::BeginPlay()
+{
+    Super::BeginPlay();
+
+    SetComandoExplosion(ComandoExplosion);
 }

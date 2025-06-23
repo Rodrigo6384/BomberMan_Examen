@@ -4,6 +4,7 @@
 
 #include "CoreMinimal.h"
 #include "InterBomba.h"
+#include "InterComandoExplosion.h"
 #include "GameFramework/Actor.h"
 #include "BombaBase.generated.h"
 
@@ -26,4 +27,8 @@ public:
 	FTimerHandle TimerHandle_Detonacion;
 	void Detonar();
 	void EjecutarDetonacion();
+	// Seteo del comando
+	void SetComandoExplosion(IInterComandoExplosion* NuevoComando);
+protected:
+	IInterComandoExplosion* ComandoExplosion;
 };

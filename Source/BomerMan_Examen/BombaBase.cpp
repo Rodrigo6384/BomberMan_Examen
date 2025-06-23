@@ -20,6 +20,7 @@ ABombaBase::ABombaBase()
 		MallaBomba->SetStaticMesh(ObjetoMallaBomba.Object);
 		MallaBomba->SetRelativeScale3D(FVector(0.5f, 0.5f, 0.5f));
 	}
+	ComandoExplosion = nullptr;
 }
 
 // Called when the game starts or when spawned
@@ -46,7 +47,17 @@ void ABombaBase::Detonar()
 
 void ABombaBase::EjecutarDetonacion()
 {
-	GEngine->AddOnScreenDebugMessage(-1, 7.f, FColor::Red, TEXT("¡La bomba ha explotado!"));
+	if (ComandoExplosion)
+	{
+		ComandoExplosion->EjecutarExplosion(this);
+	}
+
+	GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Red, TEXT("¡La bomba ha explotado!"));
 	Destroy(); // Destruye la bomba después de detonar
+}
+
+void ABombaBase::SetComandoExplosion(IInterComandoExplosion* NuevoComando)
+{
+	ComandoExplosion = NuevoComando;
 }
 

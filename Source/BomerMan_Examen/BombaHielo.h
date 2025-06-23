@@ -15,7 +15,9 @@ class BOMERMAN_EXAMEN_API ABombaHielo : public ABombaBase
 	GENERATED_BODY()
 public:
 	ABombaHielo();
-protected:
 	void Detonar();
+protected:
+	// Called when the game starts or when spawned
+	virtual void BeginPlay() override;
 	
 };

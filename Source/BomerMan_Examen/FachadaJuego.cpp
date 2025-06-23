@@ -18,6 +18,8 @@
 #include "EnemigoBase.h"
 #include "MovimientoPerseguir.h"
 #include "MovimientoAleatorio.h"
+#include "ComandoExplosionEnCadena.h"
+#include "ComandoExplosionEnCruz.h"
 
 
 // Sets default values
@@ -120,11 +122,28 @@ void AFachadaJuego::GenerarBombas(UWorld* World)
     ABombaHielo* Bomba1 = World->SpawnActor<ABombaHielo>(FVector(-2330.0f, -1400.0f, 200.0f), FRotator::ZeroRotator);
     ABombaFuego* Bomba2 = World->SpawnActor<ABombaFuego>(FVector(-2330.0f, -1000.0f, 200.0f), FRotator::ZeroRotator);
 
+    // Crear actores de comando explosión (Command)
+    AComandoExplosionEnCadena* ComandoCadena = World->SpawnActor<AComandoExplosionEnCadena>(AComandoExplosionEnCadena::StaticClass(), FVector::ZeroVector, FRotator::ZeroRotator);
+    AComandoExplosionEnCruz* ComandoCruz = World->SpawnActor<AComandoExplosionEnCruz>(AComandoExplosionEnCruz::StaticClass(), FVector::ZeroVector, FRotator::ZeroRotator);
+
+    if (Bomba1 && ComandoCadena)
+    {
+        Bomba1->SetComandoExplosion(ComandoCadena);
+        Bomba1->Detonar(); // Detonar para prueba
+    }
+
+    if (Bomba2 && ComandoCruz)
+    {
+        Bomba2->SetComandoExplosion(ComandoCruz);
+        Bomba2->Detonar();
+    }
+
     // Crear bomba compuesta
     ABombaComposite* BombaMaestra = GetWorld()->SpawnActor<ABombaComposite>();
 
     BombaMaestra->AgregarBomba(Cast<IInterBomba>(Bomba1));
     BombaMaestra->AgregarBomba(Cast<IInterBomba>(Bomba2));
+
     if (BombaMaestra)
     {
         BombaMaestra->Detonar(); // Detona todo

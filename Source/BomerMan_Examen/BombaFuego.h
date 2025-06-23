@@ -15,7 +15,9 @@ class BOMERMAN_EXAMEN_API ABombaFuego : public ABombaBase
 	GENERATED_BODY()
 public:
 	ABombaFuego();
-protected:
 	void Detonar();
+protected:
+	// Called when the game starts or when spawned
+	virtual void BeginPlay() override;
 	
 };
