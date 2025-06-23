@@ -3,7 +3,7 @@
   <ItemGroup>
     <None Include="..\..\BomerMan_Examen.uproject" />
     <Filter Include="Source">
-      <UniqueIdentifier>{DB4D113E-95D9-4271-8C78-390BD7EFDCEA}</UniqueIdentifier>
+      <UniqueIdentifier>{E4F5EF76-2F55-4C90-A31D-EEF0CDE7AC4D}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Source\BomerMan_Examen.Target.cs">
       <Filter>Source</Filter>
@@ -16,7 +16,7 @@
     <None Include="..\..\README.md" />
     <None Include="..\..\Source (2).zip" />
     <Filter Include="Config">
-      <UniqueIdentifier>{10D1C3B1-CC2E-4C5C-A27B-8543C2B22798}</UniqueIdentifier>
+      <UniqueIdentifier>{3E872638-A1B2-48F1-8FB6-62F1543A7C31}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Config\DefaultEditor.ini">
       <Filter>Config</Filter>
@@ -34,7 +34,7 @@
       <Filter>Config</Filter>
     </None>
     <Filter Include="Source\BomerMan_Examen">
-      <UniqueIdentifier>{A28E0F88-8B7E-42F2-9945-36CE2933F2E5}</UniqueIdentifier>
+      <UniqueIdentifier>{DC76238F-3783-4BF7-88B1-355FF45C1F7F}</UniqueIdentifier>
     </Filter>
     <ClCompile Include="..\..\Source\BomerMan_Examen\BombaBase.cpp">
       <Filter>Source\BomerMan_Examen</Filter>
@@ -159,6 +159,12 @@
     <ClInclude Include="..\..\Source\BomerMan_Examen\InterLaberintoBuilder.h">
       <Filter>Source\BomerMan_Examen</Filter>
     </ClInclude>
+    <ClCompile Include="..\..\Source\BomerMan_Examen\InterMovimiento.cpp">
+      <Filter>Source\BomerMan_Examen</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\BomerMan_Examen\InterMovimiento.h">
+      <Filter>Source\BomerMan_Examen</Filter>
+    </ClInclude>
     <ClCompile Include="..\..\Source\BomerMan_Examen\InterMuros.cpp">
       <Filter>Source\BomerMan_Examen</Filter>
     </ClCompile>
@@ -181,6 +187,18 @@
       <Filter>Source\BomerMan_Examen</Filter>
     </ClCompile>
     <ClInclude Include="..\..\Source\BomerMan_Examen\LaberintoDirector.h">
+      <Filter>Source\BomerMan_Examen</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\BomerMan_Examen\MovimientoAleatorio.cpp">
+      <Filter>Source\BomerMan_Examen</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\BomerMan_Examen\MovimientoAleatorio.h">
+      <Filter>Source\BomerMan_Examen</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\BomerMan_Examen\MovimientoPerseguir.cpp">
+      <Filter>Source\BomerMan_Examen</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\BomerMan_Examen\MovimientoPerseguir.h">
       <Filter>Source\BomerMan_Examen</Filter>
     </ClInclude>
     <ClCompile Include="..\..\Source\BomerMan_Examen\MuroBase.cpp">

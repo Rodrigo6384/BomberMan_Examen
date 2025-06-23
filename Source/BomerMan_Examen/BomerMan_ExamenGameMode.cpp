@@ -33,7 +33,7 @@ void ABomerMan_ExamenGameMode::BeginPlay()
 	if (Fachada)
 	{
 		Fachada->ConstruirLaberinto(GetWorld());
-		//Fachada->ConstruirEjercito(GetWorld());
+		Fachada->ConstruirEjercito(GetWorld());
 		//Fachada->ClonarEnemigo(GetWorld(), FVector(-450, -840, 140));
 		//Fachada->GenerarBombas(GetWorld());
 	}

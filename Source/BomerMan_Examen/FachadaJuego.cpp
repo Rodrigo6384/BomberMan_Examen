@@ -14,6 +14,10 @@
 #include "BombaFuego.h"
 #include "BombaComposite.h"
 #include "InterBomba.h"
+#include "Kismet/GameplayStatics.h"
+#include "EnemigoBase.h"
+#include "MovimientoPerseguir.h"
+#include "MovimientoAleatorio.h"
 
 
 // Sets default values
@@ -55,6 +59,33 @@ void AFachadaJuego::ConstruirEjercito(UWorld* World)
     AEjercitoDirector* DirectorEjercito = World->SpawnActor<AEjercitoDirector>();
     DirectorEjercito->SetBuilder(BuilderEjercito);
     DirectorEjercito->ConstruirEjercitoCompleto(World);
+    // Asignar estrategias
+    TArray<AActor*> Enemigos;
+    UGameplayStatics::GetAllActorsOfClass(World, AEnemigoBase::StaticClass(), Enemigos);
+
+    for (AActor* Actor : Enemigos)
+    {
+        AEnemigoBase* Enemigo = Cast<AEnemigoBase>(Actor);
+        if (Enemigo)
+        {
+            AActor* Estrategia = nullptr;
+
+            // Ejemplo: según el tipo, asigna una estrategia
+            if (Enemigo->IsA(AEnemigoCentauro::StaticClass()))
+            {
+                Estrategia = World->SpawnActor<AMovimientoPerseguir>();
+            }
+            else if (Enemigo->IsA(AEnemigoOrco::StaticClass()))
+            {
+                Estrategia = World->SpawnActor<AMovimientoAleatorio>();
+            }
+
+            if (Estrategia)
+            {
+                Enemigo->SetMovimiento(Estrategia);
+            }
+        }
+    }
 }
 
 void AFachadaJuego::ClonarEnemigo(UWorld* World, FVector Pos)

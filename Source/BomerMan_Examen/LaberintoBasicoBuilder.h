@@ -24,12 +24,11 @@ public:
 	virtual void Tick(float DeltaTime) override;
 public:
 	void Reset() override;
-	//virtual void GenerarMatriz() override;
-	//virtual void ConstruirMuros(UWorld* World, class AFabrica_Muros* Fabrica) override;
+
 	void GenerarZonaSuperior(UWorld* World, class AFabrica_Muros* Fabrica) override;
 	void GenerarZonaCentral(UWorld* World, class AFabrica_Muros* Fabrica) override;
 	void GenerarZonaInferior(UWorld* World, class AFabrica_Muros* Fabrica) override;
-	//TArray<TArray<int32>> Matriz;
+
 	TArray<TArray<int32>> ZonaSuperior;
 	TArray<TArray<int32>> ZonaCentral;
 	TArray<TArray<int32>> ZonaInferior;

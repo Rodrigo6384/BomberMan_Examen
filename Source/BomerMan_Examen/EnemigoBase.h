@@ -5,11 +5,12 @@
 #include "CoreMinimal.h"
 #include "InterEnemigo.h"
 #include "InterPrototypeEnemigo.h"
+#include "InterMovimiento.h"
 #include "GameFramework/Actor.h"
 #include "EnemigoBase.generated.h"
 
 UCLASS()
-class BOMERMAN_EXAMEN_API AEnemigoBase : public AActor, public IInterEnemigo, public IInterPrototypeEnemigo {
+class BOMERMAN_EXAMEN_API AEnemigoBase : public AActor, public IInterEnemigo, public IInterPrototypeEnemigo{
 	GENERATED_BODY()
 	
 public:	
@@ -28,5 +29,9 @@ public:
 	void Defender();
 
 	AActor* Clonar(FVector Posicion) override;
+
+	void SetMovimiento(AActor* MovimientoActor);
+protected:
+	IInterMovimiento* MovimientoEstrategia;
 
 };

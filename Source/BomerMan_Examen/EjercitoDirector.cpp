@@ -19,12 +19,15 @@ void AEjercitoDirector::ConstruirEjercitoCompleto(UWorld* World)
 {
     // Configurar ubicaciones base (puedes modificar según necesidades)
     Builder->SetComandanteLocation(FVector(-399.f, 0.f, 150.f));
-    Builder->SetEnemigoOrcoLocation(FVector(-599.f, 0.f, 150.f));
-    Builder->SetEnemigoCentauroLocation(FVector(-199.f, 0.f, 150.f));
+    //Builder->SetEnemigoOrcoLocation(FVector(-599.f, 0.f, 150.f));
+    //Builder->SetEnemigoCentauroLocation(FVector(-199.f, 0.f, 150.f));
     // Crear el comandante y enemigos
     Builder->CrearComandante();
-    Builder->AgregarEnemigoOrco(2);
-    Builder->AgregarEnemigoCentauro(3);
+    //Builder->AgregarEnemigoOrco(2);
+    //Builder->AgregarEnemigoCentauro(3);
+    Builder->AgregarEnemigoOrco();
+    Builder->AgregarEnemigoCentauro();
+
     // Ejecutar la lógica para que el ejército actúe
     Builder->ConstruirEjercito();
     if (GEngine) {

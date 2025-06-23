@@ -11,6 +11,8 @@ C:\Users\DAVID\Desktop\SIS_457\BomerMan_Examen\Source\BomerMan_Examen\EnemigoOrc
 C:\Users\DAVID\Desktop\SIS_457\BomerMan_Examen\Source\BomerMan_Examen\EnemigoBase.h
 C:\Users\DAVID\Desktop\SIS_457\BomerMan_Examen\Source\BomerMan_Examen\InterPrototypeEnemigo.h
 C:\Users\DAVID\Desktop\SIS_457\BomerMan_Examen\Intermediate\Build\Win64\UE4Editor\Inc\BomerMan_Examen\InterPrototypeEnemigo.generated.h
+C:\Users\DAVID\Desktop\SIS_457\BomerMan_Examen\Source\BomerMan_Examen\InterMovimiento.h
+C:\Users\DAVID\Desktop\SIS_457\BomerMan_Examen\Intermediate\Build\Win64\UE4Editor\Inc\BomerMan_Examen\InterMovimiento.generated.h
 C:\Users\DAVID\Desktop\SIS_457\BomerMan_Examen\Intermediate\Build\Win64\UE4Editor\Inc\BomerMan_Examen\EnemigoBase.generated.h
 C:\Users\DAVID\Desktop\SIS_457\BomerMan_Examen\Intermediate\Build\Win64\UE4Editor\Inc\BomerMan_Examen\EnemigoOrco.generated.h
 C:\Users\DAVID\Desktop\SIS_457\BomerMan_Examen\Source\BomerMan_Examen\EnemigoCentauro.h

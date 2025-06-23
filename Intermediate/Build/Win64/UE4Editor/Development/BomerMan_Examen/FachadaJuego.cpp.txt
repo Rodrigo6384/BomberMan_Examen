@@ -29,6 +29,8 @@ C:\Users\DAVID\Desktop\SIS_457\BomerMan_Examen\Source\BomerMan_Examen\EnemigoCen
 C:\Users\DAVID\Desktop\SIS_457\BomerMan_Examen\Source\BomerMan_Examen\EnemigoBase.h
 C:\Users\DAVID\Desktop\SIS_457\BomerMan_Examen\Source\BomerMan_Examen\InterPrototypeEnemigo.h
 C:\Users\DAVID\Desktop\SIS_457\BomerMan_Examen\Intermediate\Build\Win64\UE4Editor\Inc\BomerMan_Examen\InterPrototypeEnemigo.generated.h
+C:\Users\DAVID\Desktop\SIS_457\BomerMan_Examen\Source\BomerMan_Examen\InterMovimiento.h
+C:\Users\DAVID\Desktop\SIS_457\BomerMan_Examen\Intermediate\Build\Win64\UE4Editor\Inc\BomerMan_Examen\InterMovimiento.generated.h
 C:\Users\DAVID\Desktop\SIS_457\BomerMan_Examen\Intermediate\Build\Win64\UE4Editor\Inc\BomerMan_Examen\EnemigoBase.generated.h
 C:\Users\DAVID\Desktop\SIS_457\BomerMan_Examen\Intermediate\Build\Win64\UE4Editor\Inc\BomerMan_Examen\EnemigoCentauro.generated.h
 C:\Users\DAVID\Desktop\SIS_457\BomerMan_Examen\Source\BomerMan_Examen\EnemigoOrco.h
@@ -43,3 +45,16 @@ C:\Users\DAVID\Desktop\SIS_457\BomerMan_Examen\Source\BomerMan_Examen\BombaFuego
 C:\Users\DAVID\Desktop\SIS_457\BomerMan_Examen\Intermediate\Build\Win64\UE4Editor\Inc\BomerMan_Examen\BombaFuego.generated.h
 C:\Users\DAVID\Desktop\SIS_457\BomerMan_Examen\Source\BomerMan_Examen\BombaComposite.h
 C:\Users\DAVID\Desktop\SIS_457\BomerMan_Examen\Intermediate\Build\Win64\UE4Editor\Inc\BomerMan_Examen\BombaComposite.generated.h
+C:\Program Files\Epic Games\UE_4.27\Engine\Source\Runtime\Engine\Classes\Kismet/GameplayStatics.h
+C:\Program Files\Epic Games\UE_4.27\Engine\Source\Runtime\Engine\Classes\Kismet/KismetSystemLibrary.h
+C:\Program Files\Epic Games\UE_4.27\Engine\Source\Runtime\CoreUObject\Public\UObject/PropertyAccessUtil.h
+C:\Program Files\Epic Games\UE_4.27\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\KismetSystemLibrary.generated.h
+C:\Program Files\Epic Games\UE_4.27\Engine\Source\Runtime\Engine\Classes\Sound/DialogueTypes.h
+C:\Program Files\Epic Games\UE_4.27\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\DialogueTypes.generated.h
+C:\Program Files\Epic Games\UE_4.27\Engine\Source\Runtime\Engine\Classes\Kismet\GameplayStaticsTypes.h
+C:\Program Files\Epic Games\UE_4.27\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\GameplayStaticsTypes.generated.h
+C:\Program Files\Epic Games\UE_4.27\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\GameplayStatics.generated.h
+C:\Users\DAVID\Desktop\SIS_457\BomerMan_Examen\Source\BomerMan_Examen\MovimientoPerseguir.h
+C:\Users\DAVID\Desktop\SIS_457\BomerMan_Examen\Intermediate\Build\Win64\UE4Editor\Inc\BomerMan_Examen\MovimientoPerseguir.generated.h
+C:\Users\DAVID\Desktop\SIS_457\BomerMan_Examen\Source\BomerMan_Examen\MovimientoAleatorio.h
+C:\Users\DAVID\Desktop\SIS_457\BomerMan_Examen\Intermediate\Build\Win64\UE4Editor\Inc\BomerMan_Examen\MovimientoAleatorio.generated.h

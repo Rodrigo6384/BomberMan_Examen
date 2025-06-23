@@ -35,6 +35,10 @@ void AEnemigoBase::BeginPlay()
 void AEnemigoBase::Tick(float DeltaTime)
 {
 	Super::Tick(DeltaTime);
+    if (MovimientoEstrategia)
+    {
+        MovimientoEstrategia->Mover(this);
+    }
 
 }
 void AEnemigoBase::Atacar()
@@ -50,5 +54,10 @@ void AEnemigoBase::Defender()
 AActor* AEnemigoBase::Clonar(FVector Posicion)
 {
     return GetWorld()->SpawnActor<AEnemigoBase>(GetClass(), Posicion, FRotator::ZeroRotator);;
+}
+
+void AEnemigoBase::SetMovimiento(AActor* MovimientoActor)
+{
+    MovimientoEstrategia = Cast<IInterMovimiento>(MovimientoActor);
 }
 

@@ -23,33 +23,32 @@ void AEjercitoBuilder::CrearComandante()
 		}
 	}
 }
-void AEjercitoBuilder::AgregarEnemigoOrco(int Cantidad)
+void AEjercitoBuilder::AgregarEnemigoOrco(/*int Cantidad*/)
 {
+	//for (int i = 0; i < Cantidad; ++i) {
+	//	FVector SpawnLocationOrco = EnemigoOrcoLocation + FVector(i * -200.0f, 0.0f, 0.0f);
+	//	AEnemigoOrco* EnemigoOrco = GetWorld()->SpawnActor<AEnemigoOrco>(AEnemigoOrco::StaticClass(), SpawnLocationOrco, FRotator::ZeroRotator);
+	//	if (EnemigoOrco) {
+	//		Enemigos.Add(EnemigoOrco);
+	//		GEngine->AddOnScreenDebugMessage(-1, 20.f, FColor::Green, *FString::Printf(TEXT("Enemigo orco %d agregado al ejercito!"), i + 1));
+	//	}
+	//}
+	AEnemigoOrco* EnemigoOrco1 = GetWorld()->SpawnActor<AEnemigoOrco>(AEnemigoOrco::StaticClass(), FVector(-2019.0f, -900.0f, 150.0f), FRotator::ZeroRotator);
+	AEnemigoOrco* EnemigoOrco2 = GetWorld()->SpawnActor<AEnemigoOrco>(AEnemigoOrco::StaticClass(), FVector(201.0f, -1610.0f, 150.0f), FRotator::ZeroRotator);
 
-	//Enemigos.Add(GetWorld()->SpawnActor<AEnemigoOrco>(AEnemigoOrco::StaticClass(),EnemigoOrcoLocation,FRotator::ZeroRotator));
-	//GEngine->AddOnScreenDebugMessage(-1, 20.f, FColor::Green, TEXT("Enemigo Orco agregado al ejercito!"));
-	for (int i = 0; i < Cantidad; ++i) {
-		FVector SpawnLocationOrco = EnemigoOrcoLocation + FVector(i * -200.0f, 0.0f, 0.0f);
-		AEnemigoOrco* EnemigoOrco = GetWorld()->SpawnActor<AEnemigoOrco>(AEnemigoOrco::StaticClass(), SpawnLocationOrco, FRotator::ZeroRotator);
-		if (EnemigoOrco) {
-			Enemigos.Add(EnemigoOrco);
-			GEngine->AddOnScreenDebugMessage(-1, 20.f, FColor::Green, *FString::Printf(TEXT("Enemigo orco %d agregado al ejercito!"), i + 1));
-		}
-	}
 }
-void AEjercitoBuilder::AgregarEnemigoCentauro(int Cantidad)
+void AEjercitoBuilder::AgregarEnemigoCentauro(/*int Cantidad*/)
 {
-
-	//Enemigos.Add(GetWorld()->SpawnActor<AEnemigoCentauro>(AEnemigoCentauro::StaticClass(), EnemigoCentauroLocation, FRotator::ZeroRotator));
-	//GEngine->AddOnScreenDebugMessage(-1, 20.f, FColor::Black, TEXT("Enemigo Centauro agregado al ejercito!"));
-	for (int i = 0; i < Cantidad; ++i) {
+	/*for (int i = 0; i < Cantidad; ++i) {
 		FVector SpawnLocationCentauro = EnemigoCentauroLocation + FVector(i * 200.0f, 0.0f, 0.0f);
 		AEnemigoCentauro* Enemigo = GetWorld()->SpawnActor<AEnemigoCentauro>(AEnemigoCentauro::StaticClass(), SpawnLocationCentauro, FRotator::ZeroRotator);
 		if (Enemigo) {
 			Enemigos.Add(Enemigo);
 			GEngine->AddOnScreenDebugMessage(-1, 20.f, FColor::Black, *FString::Printf(TEXT("Enemigo Centauro %d agregado al ejercito!"), i + 1));
 		}
-	}
+	}*/
+	AEnemigoCentauro* EnemigoCentauro1 = GetWorld()->SpawnActor<AEnemigoCentauro>(AEnemigoCentauro::StaticClass(), FVector(-401.0f, -650.0f, 150.0f), FRotator::ZeroRotator);
+	AEnemigoCentauro* EnemigoCentauro2 = GetWorld()->SpawnActor<AEnemigoCentauro>(AEnemigoCentauro::StaticClass(), FVector(-2250.0f, -1850.0f, 150.0f), FRotator::ZeroRotator);
 }
 void AEjercitoBuilder::ConstruirEjercito()
 {

@@ -14,6 +14,8 @@ C:\Users\DAVID\Desktop\SIS_457\BomerMan_Examen\Source\BomerMan_Examen\InterEnemi
 C:\Users\DAVID\Desktop\SIS_457\BomerMan_Examen\Intermediate\Build\Win64\UE4Editor\Inc\BomerMan_Examen\InterEnemigo.generated.h
 C:\Users\DAVID\Desktop\SIS_457\BomerMan_Examen\Source\BomerMan_Examen\InterPrototypeEnemigo.h
 C:\Users\DAVID\Desktop\SIS_457\BomerMan_Examen\Intermediate\Build\Win64\UE4Editor\Inc\BomerMan_Examen\InterPrototypeEnemigo.generated.h
+C:\Users\DAVID\Desktop\SIS_457\BomerMan_Examen\Source\BomerMan_Examen\InterMovimiento.h
+C:\Users\DAVID\Desktop\SIS_457\BomerMan_Examen\Intermediate\Build\Win64\UE4Editor\Inc\BomerMan_Examen\InterMovimiento.generated.h
 C:\Users\DAVID\Desktop\SIS_457\BomerMan_Examen\Intermediate\Build\Win64\UE4Editor\Inc\BomerMan_Examen\EnemigoBase.generated.h
 C:\Users\DAVID\Desktop\SIS_457\BomerMan_Examen\Intermediate\Build\Win64\UE4Editor\Inc\BomerMan_Examen\EnemigoCentauro.generated.h
 C:\Program Files\Epic Games\UE_4.27\Engine\Source\Runtime\Engine\Classes\GameFramework/GameModeBase.h

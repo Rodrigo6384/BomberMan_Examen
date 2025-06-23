@@ -29,7 +29,7 @@ void ALaberintoBasicoBuilder::Tick(float DeltaTime)
 
 void ALaberintoBasicoBuilder::Reset()
 {
-	//Matriz.Empty();
+
 	ZonaSuperior.Empty();
 	ZonaCentral.Empty();
 	ZonaInferior.Empty();
@@ -41,15 +41,15 @@ void ALaberintoBasicoBuilder::GenerarZonaSuperior(UWorld* World, AFabrica_Muros*
     ZonaSuperior = {
 	{3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3},
 	{3, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 3},
-	{3, 0, 2, 1, 2, 1, 2, 1, 2, 1, 2, 1, 2, 0, 3},
+	{3, 0, 2, 1, 2, 1, 2, 1, 0, 1, 1, 1, 1, 0, 3},
+	{3, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 1, 0, 3},
+	{3, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 1, 0, 3},
+	{3, 0, 2, 1, 2, 1, 2, 1, 0, 1, 1, 1, 1, 0, 3},
 	{3, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 3},
 	{3, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 3},
 	{3, 0, 2, 1, 2, 1, 2, 1, 2, 1, 2, 1, 2, 0, 3},
-	{3, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 3},
-	{3, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 3},
-	{3, 0, 2, 1, 2, 1, 2, 1, 2, 1, 2, 1, 2, 0, 3},
-	{3, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 3}
-    };
+	{3, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 3} 
+	};
     const float Espaciado = 100.f;
     FVector Origen = FVector(-2350.f, -1950.f, 130.f);
 
@@ -120,11 +120,11 @@ void ALaberintoBasicoBuilder::GenerarZonaInferior(UWorld* World, AFabrica_Muros*
 	{3, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 3},
 	{3, 0, 2, 1, 2, 1, 2, 1, 2, 1, 2, 1, 2, 0, 3},
 	{3, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 3},
+	{3, 0, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 3},
+	{3, 0, 1, 0, 0, 1, 0, 1, 2, 1, 2, 1, 2, 0, 3},
+	{3, 0, 1, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 3},
+	{3, 0, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 3},
 	{3, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 3},
-	{3, 0, 2, 1, 2, 1, 2, 1, 2, 1, 2, 1, 2, 0, 3},
-	{3, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 3},
-	{3, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 3},
-	{3, 0, 2, 1, 2, 1, 2, 1, 2, 1, 2, 1, 2, 0, 3},
 	{3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3}
 	};
 	const float Espaciado = 100.f;
@@ -152,40 +152,4 @@ void ALaberintoBasicoBuilder::GenerarZonaInferior(UWorld* World, AFabrica_Muros*
 	Fabrica->EjecutarComportamientoMuros();
 }
 
-//void ALaberintoBasicoBuilder::GenerarMatriz()
-//{
-//	Matriz = {
-//	{1, 0, 2},
-//	{2, 3, 1},
-//	{0, 1, 3}
-//	};
-//}
-//
-//void ALaberintoBasicoBuilder::ConstruirMuros(UWorld* World, AFabrica_Muros* Fabrica)
-//{
-//    const float Espaciado = 100.f;
-//    FVector Origen = FVector(-2350.f, -1950.f, 130.f);
-//
-//    for (int i = 0; i < Matriz.Num(); ++i)
-//    {
-//        for (int j = 0; j < Matriz[i].Num(); ++j)
-//        {
-//            int Tipo = Matriz[i][j];
-//            FString NombreMuro;
-//
-//            switch (Tipo)
-//            {
-//            case 1: NombreMuro = TEXT("Muro_Madera"); break;
-//            case 2: NombreMuro = TEXT("Muro_Concreto"); break;
-//            case 3: NombreMuro = TEXT("Muro_Hierro"); break;
-//            default: continue;
-//            }
-//
-//            FVector Pos = Origen + FVector(i * Espaciado, j * Espaciado, 0.f);
-//            Fabrica->CreateMuros(NombreMuro, Pos);
-//        }
-//    }
-//
-//    Fabrica->EjecutarComportamientoMuros();
-//}
-//
+
